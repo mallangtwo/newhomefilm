@@ -1,0 +1,180 @@
+/* 로컬 폰트 설정 */
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url('./fonts/Eulyoo1945-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 스타일에 폰트 적용 */
+body {
+    font-family: 'Eulyoo1945', sans-serif; /* 로컬 폰트를 기본 폰트로 설정 */
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* 다크 그레이 배경 */
+    color: #fff; /* 흰색 텍스트 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #000; /* 블랙 배경 */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+header a {
+    color: #fff; /* 헤더 링크 글씨 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-size: 2em; /* 헤더 글씨 크기 조절 */
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: #ddd; /* 호버 시 색상 변경 */
+}
+
+/* 네비게이션 스타일 */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 콘텐츠 스타일 */
+.content {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#slideShow {
+    margin: 20px 0;
+    overflow: hidden;
+    border: 1px solid #444;
+}
+
+#slides img {
+    width: 100%;
+    display: block;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 섹션 스타일 */
+section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+section div:first-child {
+    font-size: 1.4em; /* 섹션 타이틀 글씨 크기 조절 */
+    margin-bottom: 10px;
+    color: #fff;
+    border-bottom: 2px solid #444;
+    padding-bottom: 8px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+section div {
+    font-size: 0.85em; /* 필모그래피 내용 글씨 크기 조절 */
+    line-height: 1.6; /* 줄 간격 증가 */
+    color: #ddd;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+footer div {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+#sns img {
+    width: 35px; /* SNS 아이콘 크기 조절 */
+    height: 35px;
+    margin: 0 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#sns img:hover {
+    opacity: 1;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    header a {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    section div:first-child {
+        font-size: 1.2em;
+    }
+
+    section div {
+        font-size: 0.9em;
+    }
+
+    #sns img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header a {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    section div:first-child {
+        font-size: 1em;
+    }
+
+    section div {
+        font-size: 0.85em;
+    }
+
+    #sns img {
+        width: 25px;
+        height: 25px;
+    }
+}

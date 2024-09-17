@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Portfolio - Film</title>
+    <link rel="stylesheet" href="film.css">
+    <script>
+        // 슬라이드를 여는 함수 (영화별로 구분)
+        function openSlide(slideIndex, movieIndex) {
+            var slides = document.querySelectorAll(`.slide-content[data-movie="${movieIndex}"]`);
+            slides.forEach(slide => slide.style.display = 'none'); // 모든 슬라이드 숨기기
+            slides[slideIndex].style.display = 'block'; // 클릭한 사진의 슬라이드 보이기
+            document.querySelector(`.slider[data-movie="${movieIndex}"]`).style.display = 'flex'; // 해당 슬라이더 열기
+        }
+
+        // 슬라이드를 닫는 함수
+        function closeSlide(movieIndex) {
+            document.querySelector(`.slider[data-movie="${movieIndex}"]`).style.display = 'none';
+        }
+
+        // 슬라이드 내에서 화살표로 사진 넘기기
+        function changeSlide(n, movieIndex) {
+            var slides = document.querySelectorAll(`.slide-content[data-movie="${movieIndex}"]`);
+            var currentSlide = document.querySelector(`.slider[data-movie="${movieIndex}"]`).dataset.currentSlide;
+            slides[currentSlide].style.display = 'none'; // 현재 슬라이드 숨기기
+            currentSlide = (parseInt(currentSlide) + n + slides.length) % slides.length; // 인덱스 업데이트
+            slides[currentSlide].style.display = 'block'; // 새 슬라이드 보이기
+            document.querySelector(`.slider[data-movie="${movieIndex}"]`).dataset.currentSlide = currentSlide; // 현재 슬라이드 인덱스 저장
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../index.html">Actor Portfolio</a>
+        </div>
+        <nav>
+            <a href="./drama.html">Drama</a>
+            <a href="./film.html">Film</a>
+            <a href="./play.html">Play</a>
+            <a href="./CF.html">CF</a>
+            <a href="./photo.html">Photo</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section class="film">
+            <!-- 영화 1 -->
+            <div class="film-item">
+                <img src="../images/film1.png" alt="Film 1" class="film-image">
+                <div class="description">
+                    <h2>2023 단편영화 <대본리딩> </h2>
+                    <p>승아 역</p>
+                    
+                    <!-- 기본적으로 보이는 사진들 -->
+                    <div class="photos">
+                        <img src="../images/film1-1.png" alt="Film 1 Photo 1" onclick="openSlide(0, 1)">
+                        <img src="../images/film1-2.png" alt="Film 1 Photo 2" onclick="openSlide(1, 1)">
+                        <img src="../images/film1-3.png" alt="Film 1 Photo 3" onclick="openSlide(2, 1)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영화 2 -->
+            <div class="film-item">
+                <img src="../images/film2.png" alt="Film 2" class="film-image">
+                <div class="description">
+                    <h2>2023 단편영화 <297></h2>
+                    <p>승아 역</p>
+                    
+                    <div class="photos">
+                        <img src="../images/film2-1.png" alt="Film 2 Photo 1" onclick="openSlide(0, 2)">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 영화 1 슬라이드 -->
+    <div class="slider" data-movie="1" style="display:none;" data-current-slide="0">
+        <span class="close" onclick="closeSlide(1)">×</span>
+        <div class="slide-container">
+            <img class="slide-content" data-movie="1" src="../images/film1-1.png" style="display:block;">
+            <img class="slide-content" data-movie="1" src="../images/film1-2.png" style="display:none;">
+            <img class="slide-content" data-movie="1" src="../images/film1-3.png" style="display:none;">
+        </div>
+        <a class="prev" onclick="changeSlide(-1, 1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1, 1)">&#10095;</a>
+    </div>
+
+    <!-- 영화 2 슬라이드 -->
+    <div class="slider" data-movie="2" style="display:none;" data-current-slide="0">
+        <span class="close" onclick="closeSlide(2)">×</span>
+        <div class="slide-container">
+            <img class="slide-content" data-movie="2" src="../images/film2-1.png" style="display:block;">
+        </div>
+        <a class="prev" onclick="changeSlide(-1, 2)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1, 2)">&#10095;</a>
+    </div>
+
+    <footer>
+        <div id="sns">
+            <a href="https://www.youtube.com/@user-kh2js2lr2j"><img src="../images/sns-2.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/onl_jigem?igsh=MWhobGF3bW5vMHFhYw%3D%3D&utm_source=qr"><img src="../images/sns-3.png" alt="Instagram"></a>
+            <a href="https://m.blog.naver.com/qodn9124?tab=1"><img src="../images/sns-1.png" alt="Naver Blog"></a>
+        </div>
+        <div>Contact: qodn9124@naver.com</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* 로컬 폰트 설정 */
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url('/fonts/Eulyoo1945-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Eulyoo1945', sans-serif; /* 로컬 폰트를 기본 폰트로 설정 */
+    background-color: #111; /* 다크 그레이 배경 */
+    color: #fff; /* 흰색 텍스트 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #000; /* 블랙 배경 */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+header a {
+    color: #fff; /* 헤더 링크 글씨 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: #ddd; /* 호버 시 색상 변경 */
+}
+
+/* 네비게이션 스타일 */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 드라마 및 웹드라마 섹션 스타일 */
+.drama {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.drama-category {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff; /* 골드 색상 */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #444; /* 카테고리 구분을 위한 하단 경계선 */
+}
+
+.web-drama-category {
+    margin-top: 50px; /* 드라마와 웹드라마 사이에 간격을 줌 */
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff; /* 웹드라마 카테고리 구분을 위한 파란색 */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #444;
+}
+
+.drama-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
+.drama-item video {
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.drama-item .description {
+    max-width: 500px;
+}
+
+.drama-item h2 {
+    color: #f4eec6; /* 골드 색상 */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.drama-item p {
+    color: #ccc;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+footer div {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+#sns img {
+    width: 35px;
+    height: 35px;
+    margin: 0 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#sns img:hover {
+    opacity: 1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .drama-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drama-item video {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .drama-item .description {
+        max-width: 100%;
+    }
+}

@@ -183,3 +183,65 @@ footer div {
         font-size: 1em;
     }
 }
+
+/* 헤더 스타일 */
+header {
+    background-color: #000; /* 블랙 배경 */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+header a {
+    color: #fff; /* 헤더 링크 글씨 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-size: 2em; /* 헤더 글씨 크기 조절 */
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: #ddd; /* 호버 시 색상 변경 */
+}
+
+/* 네비게이션 스타일 */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    header a {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header a {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+}

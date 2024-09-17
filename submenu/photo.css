@@ -1,0 +1,185 @@
+/* 로컬 폰트 설정 */
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url('/fonts/Eulyoo1945-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Eulyoo1945', sans-serif; /* 로컬 폰트를 기본 폰트로 설정 */
+    background-color: #111; /* 다크 그레이 배경 */
+    color: #fff; /* 흰색 텍스트 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: #ddd;
+}
+
+/* 네비게이션 스타일 */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 갤러리 섹션 스타일 */
+.gallery {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1); /* 마우스 오버 시 이미지 확대 */
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+footer div {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+#sns img {
+    width: 35px;
+    height: 35px;
+    margin: 0 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#sns img:hover {
+    opacity: 1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .gallery div:first-child {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery div:first-child {
+        font-size: 1.2em;
+    }
+
+    #sns img {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* gallery2 스타일 */
+.gallery2 {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #222; /* 약간 밝은 배경 */
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1em; /* 기본 글씨 크기 */
+    letter-spacing: 1px;
+}
+
+.gallery2 div {
+    margin: 10px 0;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.gallery2 div:first-child {
+    font-size: 1.4em; /* 생일과 키 부분 글씨 크기 줄이기 */
+    font-weight: 500;
+}
+
+/* gallery2 반응형 스타일 */
+@media (max-width: 768px) {
+    .gallery2 {
+        font-size: 0.9em;
+    }
+
+    .gallery2 div:first-child {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery2 {
+        font-size: 0.8em;
+    }
+
+    .gallery2 div:first-child {
+        font-size: 1em;
+    }
+}
